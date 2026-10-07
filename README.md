@@ -1,3 +1,14 @@
+> **Fork and evaluation note:** This repository contains inherited notebooks and reports; their results are not new experiments by this fork's owner. The notebook preprocessing computes the `ratio` feature from fraud labels before splitting, so its reported metrics should not be used as unbiased test performance. Geographic correlations in this historical sample do not establish whether any current posting is fraudulent.
+
+## Reproducible baseline added in this fork
+
+```sh
+pip install -r requirements-baseline.txt
+python train_baseline.py
+```
+
+The new pipeline removes exact duplicate texts, splits first, fits TF-IDF on training text only, and reports positive-class precision/recall/F1, average precision and ROC AUC. It excludes the label-derived location ratio. See `baseline_metrics.json` after running. This is a historical random-split baseline; a company-disjoint or temporal evaluation remains future work. Original authors' notebooks and reports are retained below.
+
 # Fake-Job-Posting-Prediction
 
 # Definition
