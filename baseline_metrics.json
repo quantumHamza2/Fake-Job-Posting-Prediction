@@ -1,0 +1,36 @@
+{
+  "model": "TF-IDF + balanced logistic regression",
+  "split": "stratified random 75/25, seed 42; exact duplicate texts removed",
+  "train_rows": 12000,
+  "test_rows": 4000,
+  "average_precision": 0.8249234406109771,
+  "roc_auc": 0.9725612207749296,
+  "classification_report": {
+    "0": {
+      "precision": 0.9904912836767037,
+      "recall": 0.9814184768385239,
+      "f1-score": 0.9859340081503878,
+      "support": 3821.0
+    },
+    "1": {
+      "precision": 0.6682242990654206,
+      "recall": 0.7988826815642458,
+      "f1-score": 0.727735368956743,
+      "support": 179.0
+    },
+    "accuracy": 0.97325,
+    "macro avg": {
+      "precision": 0.8293577913710621,
+      "recall": 0.8901505792013849,
+      "f1-score": 0.8568346885535654,
+      "support": 4000.0
+    },
+    "weighted avg": {
+      "precision": 0.9760698361153487,
+      "recall": 0.97325,
+      "f1-score": 0.9743796190464722,
+      "support": 4000.0
+    }
+  },
+  "limitations": "Random split on a historical dataset; not time-based or company-disjoint. Similar postings can remain across splits. Not a fraud verdict or a deployment benchmark."
+}
